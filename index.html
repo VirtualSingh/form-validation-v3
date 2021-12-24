@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <title>Registration form</title>
+  </head>
+  <body>
+    <div class="success-popup" id="popup">
+      <h3>Registraion successful!</h3>
+      <p>Welcome aboard <span class="name"></span></p>
+      <img
+        src="./dist/check-circle-solid.svg"
+        alt="check mark"
+        height="100"
+        width="100"
+      />
+      <button type="submit" class="close-popup">OK</button>
+    </div>
+    <div class="container">
+      <!-- <div class="form-wrapper"> -->
+      <h1 class="txt-xl">get started.</h1>
+      <p class="txt-lg">Resgister in 20 seconds</p>
+      <form id="form">
+        <div class="input-grp">
+          <input type="text" id="name" class="txt-md" autocomplete="off" />
+          <label for="name" class="txt-sm">Name</label>
+          <small>error message</small>
+        </div>
+        <div class="input-grp">
+          <input type="email" id="email" class="txt-md" autocomplete="off" />
+          <label for="email" class="txt-sm">E-mail</label>
+          <small>error message</small>
+        </div>
+        <div class="input-grp">
+          <input type="password" id="password" class="txt-md" />
+          <label for="password" class="txt-sm">Password</label>
+          <small>error message</small>
+          <button type="button" class="toggle txt-sm">show</button>
+        </div>
+        <div class="pass__strength mb-md clearfix">
+          <div class="col float-left">
+            <!-- ------------------------ -->
+            <p
+              class="pass__strength-parameter txt-xs mr-sm incorrect"
+              id="capital-letter"
+            >
+              One uppercase character
+            </p>
+            <!-- ------------------------- -->
+            <p class="pass__strength-parameter txt-xs incorrect" id="length">
+              Seven characters at least
+            </p>
+          </div>
+          <div class="col float-left">
+            <!-- ---------------------------- -->
+            <p
+              class="pass__strength-parameter txt-xs mr-sm incorrect"
+              id="small-letter"
+            >
+              One lower character
+            </p>
+            <!-- ----------------------------- -->
+            <p class="pass__strength-parameter txt-xs incorrect" id="number">
+              One number
+            </p>
+          </div>
+        </div>
+        <input type="submit" value="Register" class="btn" />
+        <!-- <button class="btn">Resgister</button> -->
+      </form>
+      <footer>
+        <p class="login">Already a member? <a href="#!">Log In Here</a></p>
+      </footer>
+      <!-- </div> -->
+    </div>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
